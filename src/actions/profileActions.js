@@ -15,7 +15,7 @@ export const createProfile = (formData,{username},edit=false) => async dispatch 
         const res = await axios.post(`/users/${username}/profiles`,formData,config);
         dispatch({
             type:PROFILE_CREATED
-        })
+        });
         dispatch(setAlert(edit ? 'Profile updated':'Profile created',"success"));
 
     }catch (e) {
