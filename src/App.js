@@ -20,6 +20,9 @@ import AddExperience from "./components/profile-forms/AddExperience";
 import EditExperience from "./components/profile-forms/EditExperience";
 import AddEducation from "./components/profile-forms/AddEducation";
 import EditEducation from "./components/profile-forms/EditEducation";
+import Courses from "./components/courses/Courses";
+import AddCourse from "./components/profile-forms/AddCourse";
+import AddUserToCourse from "./components/profile-forms/AddUserToCourse";
 
 if(localStorage.jwt){
     setAuthToken(localStorage.jwt);
@@ -45,8 +48,9 @@ const App = () => {
                         <PrivateRoute exact path={'/add-education'} component={AddEducation}/>
                         <PrivateRoute exact path={'/experience-:userExperience'} component={EditExperience}/>
                         <Route exact path={'/education-:educationUser'} component={EditEducation}/>
-
-
+                        <PrivateRoute exact path={'/courses'} component={Courses}/>
+                        <PrivateRoute exact path={'/add-course'} component={AddCourse}/>
+                        <PrivateRoute exact path={'/add-user-course'} component={AddUserToCourse}/>
                     </Switch>
                 </section>
             </Fragment>

@@ -10,6 +10,7 @@ const Navbar = () => {
     const authLinks = (
         <ul>
             <li><Link to={"/dashboard"}>Dashboard</Link></li>
+            <li><Link to={"/courses"}>Courses</Link></li>
             <li><Link to={'/corona'}>CoronaVirus</Link></li>
             <li><Link to={'/'} onClick={()=>dispatch(logout())}>
                 <i className={'fas fa-sign-out-alt'}></i>{' '}

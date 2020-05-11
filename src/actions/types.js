@@ -23,4 +23,7 @@ export const GET_EDUCATION = 'GET_EDUCATION';
 export const GET_EDUCATIONS = 'GET_EDUCATIONS';
 export const DELETE_EDUCATION = 'DELETE_EDUCATION';
 export const EDIT_EDUCATION = 'EDIT_EDUCATION';
+export const ADD_COURSE = "ADD_COURSE";
+export const GET_COURSES = "GET_COURSES";
+export const PUT_COURSE = "PUT_COURSE";
 

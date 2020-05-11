@@ -5,12 +5,14 @@ import profileReducer from "./profileReducer";
 import coronaReducer from "./coronaReducer";
 import experienceReducer from "./experienceReducer";
 import educationReducer from "./educationReducer";
+import courseReducer from "./courseReducer";
 const rootReducer = combineReducers({
    alert:alertReducer,
    auth:authReducer,
    profile:profileReducer,
    corona:coronaReducer,
    experience:experienceReducer,
-   education:educationReducer
+   education:educationReducer,
+   course:courseReducer
 });
 export default rootReducer;

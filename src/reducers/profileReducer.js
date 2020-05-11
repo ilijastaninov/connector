@@ -3,7 +3,8 @@ import {DELETE_PROFILE, GET_PROFILE, PROFILE_CREATED} from "../actions/types";
 const initialState = {
     current_profile: null,
     profile:false,
-    loading:true
+    loading:true,
+    flagProfile:false
 };
 
 const profileReducer = (state=initialState,action) =>{
@@ -18,13 +19,15 @@ const profileReducer = (state=initialState,action) =>{
         case PROFILE_CREATED:
             return {
                 ...state,
-                profile:!state.profile
+                profile:!state.profile,
+                flagProfile:true
             };
         case DELETE_PROFILE:
             return {
                 ...state,
                 profile:!state.profile,
-                current_profile:null
+                current_profile:null,
+                flagProfile:false
             };
         default:
             return state;
