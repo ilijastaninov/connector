@@ -2,6 +2,7 @@ import React, {Fragment, useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {Link} from "react-router-dom";
 import {addUserToCourse} from "../../actions/courseActions";
+import {loadUser} from "../../actions/authActions";
 
 const AddUserToCourse = () => {
     const username = useSelector(state => state.auth.user.username);
@@ -35,7 +36,8 @@ const AddUserToCourse = () => {
         e.preventDefault();
         console.log(JSON.stringify(formData));
 
-        await dispatch(addUserToCourse({username},JSON.stringify(formData)))
+        await dispatch(addUserToCourse({username},JSON.stringify(formData)));
+        await dispatch(loadUser());
     };
     return (
         <Fragment>

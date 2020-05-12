@@ -3,9 +3,10 @@ import {Link} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 
 const CourseTable = () => {
-    const user = useSelector(state=>state.auth.user);
+
     const courses = useSelector(state=>state.course.courses);
     const isCourse = useSelector(state=>state.course.isCourse);
+    //const userCourses = useSelector(state=>state.auth.user.courses);
     const dispatch = useDispatch();
     return (
         <Fragment>
@@ -24,6 +25,8 @@ const CourseTable = () => {
                 </Fragment>
 
             )}
+
+
         </Fragment>
     );
 };
